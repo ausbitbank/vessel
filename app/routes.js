@@ -40,10 +40,11 @@ class Routes extends Component {
   changeNode(url) {
     if (url && this.isURL(url)) {
       // If it's a valid URL, set
-      steem.api.setWebSocket(url);
+      //steem.api.setWebSocket(url); // Disabling depreciated method
+      steem.api.setOptions({ url: url }); // Allows https & websocket
     } else {
-      // Otherwise set to the rpc.buildteam.io node
-      steem.api.setWebSocket('https://rpc.buildteam.io');
+      // Otherwise set to the rpc.steemviz.com node
+      steem.api.setOptions({ url: 'https://rpc.steemviz.com'});
     }
     // Force a refresh immediately after change
     this.props.actions.refreshGlobalProps();
