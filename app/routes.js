@@ -42,9 +42,11 @@ class Routes extends Component {
       // If it's a valid URL, set
       //steem.api.setWebSocket(url); // Disabling depreciated method
       steem.api.setOptions({ url: url }); // Allows https & websocket
+      steem.api.stop(); // 
     } else {
       // Otherwise set to the rpc.steemviz.com node
       steem.api.setOptions({ url: 'https://rpc.steemviz.com'});
+      steem.api.stop();
     }
     // Force a refresh immediately after change
     this.props.actions.refreshGlobalProps();
