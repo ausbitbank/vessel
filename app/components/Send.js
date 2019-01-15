@@ -37,6 +37,11 @@ const exchangeOptions = [
     text: 'Shapeshift (@shapeshiftio)',
     value: 'shapeshiftio',
   },
+  {
+    key: 'binance',
+    text: 'Binance (@deepcrypto8)',
+    value: 'deepcrypto8',
+  },
 ];
 
 const exchangeLinks = {
@@ -45,7 +50,8 @@ const exchangeLinks = {
   changelly: 'https://changelly.com',
   'openledger-dex': 'https://openledger.io',
   poloniex: 'https://poloniex.com',
-  shapeshiftio: 'https://shapeshift.io'
+  shapeshiftio: 'https://shapeshift.io',
+  binance: 'https://binance.com'
 };
 
 const exchangeNotes = {
