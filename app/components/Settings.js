@@ -104,7 +104,20 @@ export default class Settings extends Component {
               />
             </Form.Group>
           </Segment>
-
+          <Segment attached>
+            <Header size="small">
+              Binance
+            </Header>
+            <Form.Group widths="equal">
+              <Form.Input
+                label="STEEM Memo (Unencrypted)"
+                name="binance_steem"
+                value={this.props.preferences.poloniex_steem}
+                onChange={this.handleChange}
+                placeholder="Enter your STEEM Unencrypted Memo key for Binance"
+              />
+            </Form.Group>
+          </Segment>
         </Form>
 
       </Segment>
